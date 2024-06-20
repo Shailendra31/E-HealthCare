@@ -87,14 +87,24 @@
                     <h2 class="text-center">User Login</h2>
                     
                     
-                      <c:if test="${not empty sucMsg }" >
-                    	<p class="text-center text-success fs-3 ">${sucMsg}</p>
-                    	<c:remove var="sucMsg" scope="session"/>
-                    </c:if>
-                     <c:if test="${not empty errorMsg }" >
-                    	<p class="text-center text-danger fs-3 ">${errorMsg}</p>
-                    	<c:remove var="errorMsg" scope="session"/>
-                    </c:if>
+                             <%
+							    String sucMsg = (String) session.getAttribute("sucMsg");
+							    String errorMsg = (String) session.getAttribute("errorMsg");
+				               %>
+							
+					         <% if (sucMsg != null && !sucMsg.isEmpty()) { %>
+							    <p class="text-center text-success fs-5"><%= sucMsg %></p>
+							    <%
+							        session.removeAttribute("sucMsg");
+							    %>
+							  <% } %>
+							
+							  <% if (errorMsg != null && !errorMsg.isEmpty()) { %>
+							    <p class="text-center text-danger fs-5"><%= errorMsg %></p>
+							    <%
+							        session.removeAttribute("errorMsg");
+							    %>
+							  <% } %>
                     
                     
                     <form action="userLogin" method="post">

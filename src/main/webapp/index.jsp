@@ -16,12 +16,6 @@
 </head>
 <body>
 	<%@include file ="component/navbar.jsp" %>
-	
-	<% Connection conn = DBConnect.getConn() ;
-			out.print(conn);
-	
-	
-	%>
 	<%@include file ="component/hero.jsp" %>
 	<%@include file ="component/services.jsp" %>
 	<%@include file ="component/department.jsp" %>
