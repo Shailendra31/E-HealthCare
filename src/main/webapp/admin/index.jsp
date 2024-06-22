@@ -120,10 +120,10 @@ button:hover {
             <h2>Departments</h2>
         </div>
         <div class="form-content">
-            <form id="hoverForm">
+            <form action ="../add_dept" method="post"  id="hoverForm">
                 <label for="name">Departments:</label>
                 <input type="text" id="department" name="department" required>
-                <button type="submit" herf="add_dep">ADD</button>
+                <button type="submit" >ADD</button>
             </form>
         </div>
     </div>

@@ -16,8 +16,9 @@
 </head>
 <body>
 	<%@include file ="component/navbar.jsp" %>
+	<%@include file ="component/Emergency.jsp" %>
+	
 	<%@include file ="component/hero.jsp" %>
-	<%@include file ="component/services.jsp" %>
 	<%@include file ="component/department.jsp" %>
 	
 	
