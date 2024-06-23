@@ -12,19 +12,19 @@
    
   <%@include file ="component/navbar.jsp" %>
   
-  <div style="display:flex ;justify-content: center ; margin:30px;">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
+  <div class="d-flex justify-content-center mt-10">
+  <div class="row row-cols-1 row-cols-md-2 g-4 text-center shadow p-3 mb-5 bg-body-tertiary rounded">
+  <div class="col ">
+    <div class="card shadow bg-body-tertiary rounded bg-warning">
      
-      <div class="card-body">
+      <div class="card-body ">
         <h5 class="card-title">Doctor Login</h5>
         <a href="doctor_login.jsp" class="btn btn-primary">Login</a>
         </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card shadow bg-body-tertiary rounded bg-warning">
       
       <div class="card-body">
         <h5 class="card-title">Admin Login</h5>
@@ -33,23 +33,37 @@
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card shadow bg-body-tertiary rounded bg-warning bg-warning">
       
       <div class="card-body">
         <h5 class="card-title">User Login</h5>
-        <a href="user_login.jsp" class="btn btn-primary">Login</a>
+        <a href="user_login.jsp" class="btn btn-primary ">Login</a>
         </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card shadow bg-body-tertiary rounded bg-warning">
       
       <div class="card-body">
-        <h5 class="card-title">Appointment</h5>
-        <a href="#" class="btn btn-primary">Get Appointment</a>
+        <h5 class="card-title">Laboratory</h5>
+        <a href="#" class="btn btn-primary">Login</a>
         </div>
     </div>
   </div>
+  
+  <div class="col">
+    <div class="card shadow bg-body-tertiary rounded bg-warning">
+      
+      <div class="card-body">
+        <h5 class="card-title">Ward Master</h5>
+        <a href="#" class="btn btn-primary">Login</a>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  
 </div>
 </div>
 </body>

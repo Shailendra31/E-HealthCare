@@ -1,11 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>About</title>
-<%@include file ="component/allcss.jsp" %>
 
 <style>
 .vision{
@@ -25,13 +17,7 @@ padding : 0px 150px;
 
 }
 </style>
-</head>
-<body>
 
-
-	<%@include file ="component/navbar.jsp" %>
-	<%@include file ="component/Emergency.jsp" %>
-	
 	 
   <div style="text-align:center ; margin : 15px" >
    <h2> ABOUT US</h2>
@@ -70,7 +56,3 @@ padding : 0px 150px;
    
   
   </div>
-	
- 
-</body>
-</html>

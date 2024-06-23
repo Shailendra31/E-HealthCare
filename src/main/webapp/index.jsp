@@ -21,6 +21,10 @@
 	<%@include file ="component/hero.jsp" %>
 	<%@include file ="component/department.jsp" %>
 	
+	<%@include file ="component/About.jsp" %>
+	<%@include file ="component/footer.jsp" %>
+	
+	
 	
 	
 </body>

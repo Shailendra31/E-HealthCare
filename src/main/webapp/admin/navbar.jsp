@@ -9,7 +9,7 @@
         <div class="mx-auto d-flex justify-content-center">
             <ul class="navbar-nav d-flex justify-content-center">
                 <li class="nav-item ">
-                    <a class="nav-link active" href="index.jsp">DOCTOR</a>
+                    <a class="nav-link active" href="viewDoctor.jsp">DOCTOR</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="about.jsp">PATIENT</a>

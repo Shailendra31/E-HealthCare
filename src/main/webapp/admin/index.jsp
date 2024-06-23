@@ -107,8 +107,8 @@ button:hover {
             <h2>Doctor</h2>
         </div>
         <div class="form-content">
-            <form id="hoverForm">
-                <button type="submit">ADD</button>
+            <form id="hoverForm" action="addDoctor.jsp">
+                 <button type="submit">ADD</button>
             </form>
         </div>
     </div>
