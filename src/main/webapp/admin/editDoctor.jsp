@@ -1,14 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      <%@ page import="com.dao.DoctorDao" %>
         <%@ page import="com.dao.DepartmentDao" %>
+         <%@ page import="com.entity.Doctor" %>
     <%@ page import="com.db.DBConnect" %>
     <%@ page import="com.entity.Department" %>
-    <%@ page import="java.util.List" %>
+    <%@ page import="java.util.*" %>
+   <%@ page import="java.lang.*" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Doctor</title>
+<title>Edit Doctor</title>
 <%@include file ="../component/allcss.jsp" %>
 <style>
  body {
@@ -92,33 +96,50 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="login-box">
-                    <h2 class="text-center">Doctor Register</h2>
-                    <form action="../doctor_register" method="post" id="passwordForm">
+                    <h2 class="text-center">Edit Doctor</h2>
+                    
+                    <%
+                       int rid = Integer.parseInt(request.getParameter("rid"));
+                       DoctorDao dao3= new DoctorDao(DBConnect.getConn());
+                       Doctor d=  dao3.getDoctorById(rid);
+                    
+                    %>
+                    
+                    
+                    
+                    
+                    <form action="../update_Doctor" method="post" id="edit">
+                    
+                    
+                    
                     
                     
                     
                         <div class="form-group position-relative">
                             <label for="firstname">First Name</label>
-                            <input type="text" id="username" name="firstname" class="form-control" required>
+                            <input type="text" id="username" name="firstname" class="form-control" required
+                            value="<%=d.getFirstname()%>">
                            
                         </div>
                         
                          <div class="form-group position-relative">
                             <label for="lastname">Last Name</label>
-                            <input type="text" id="lastname" name="lastname" class="form-control" >
+                            <input type="text" id="lastname" name="lastname" class="form-control" 
+                            value="<%=d.getLastname()%>">
                            
                         </div>
                         
                           <div class="form-group position-relative">
                             <label for="dob">DOB</label>
-                            <input type="date" id="dob" name="dob" class="form-control" >
+                            <input type="date" id="dob" name="dob" class="form-control"
+                            value="<%= d.getDob() %>" >
                            
                         </div>
                         
                         <div class="form-group position-relative">
                             <label for="dob">Department</label>
                             <select name="spec" required class="form-control">
-                            <option>--select--</option>
+                            <option><%= d.getDepartment() %></option>
                             
                             <%
                             DepartmentDao dao1 = new DepartmentDao(DBConnect.getConn());
@@ -139,28 +160,34 @@
                         
                           <div class="form-group position-relative">
                             <label for="emailaddress">Email Address</label>
-                            <input type="email" id="emailaddress" name="emailaddress" class="form-control" required>
+                            <input type="email" id="emailaddress" name="emailaddress" class="form-control" required
+                            
+                            value="<%= d.getEmailaddress()%>">
                           
                         </div>
                         
                         
                         <div class="form-group position-relative">
                             <label for="mobile">Mobile No</label>
-                            <input type="text" id="mobile" name="mobile" class="form-control" minlength="10" required>
+                            <input type="text" id="mobile" name="mobile" class="form-control" minlength="10" required
+                            value="<%=d.getMobile()%>">
                             
                         </div>
                         
                          <div class="form-group position-relative">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="form-control" minlength="10" required>
+                            <input type="text" id="password" name="password" class="form-control" minlength="10" required
+                            value="<%=d.getPassword()%>">
                             
                         </div>
+                        
+                        <input type="hidden" name="rid" value="<%= d.getRid() %>">
                         
                         
                         <small class="error" id="error">Password must be at least 10 characters long and contain at least one special character.</small>
                        
                        
-                       <button type="submit" class="btn btn-custom btn-block text-bg-success p-3">Register</button>
+                       <button type="submit" class="btn btn-custom btn-block text-bg-success p-3">Update</button>
                          
                         
                     </form>

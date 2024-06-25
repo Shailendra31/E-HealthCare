@@ -34,7 +34,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             width: 80%;
-            max-width: 800px;
+            
             margin: 20px;
             padding: 20px;
         }
@@ -63,12 +63,14 @@
         <table>
             <thead>
                 <tr>
-                    <th>RID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>DOB</th>
-                    <th>Email</th>
-                    <th>Mobile No</th>
+                    <th scope="col">RID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile No</th>
+                    <th scope="col">Action</th>
                     
                 </tr>
             </thead>
@@ -85,11 +87,12 @@
                     <td><%=d.getFirstname() %></td>
                     <td><%=d.getLastname() %></td>
                     <td><%=d.getDob() %></td>
+                    <td><%= d.getDepartment() %>
                     <td><%= d.getEmailaddress() %></td>
                     <td><%=d.getMobile() %></td>
                    <td>
-                   <a href="#" class "btn btn-sm btn-primary">Edit</a>
-                   <a href="#" class "btn btn-sm btn-primary">Delete</a>  
+                   <a href="editDoctor.jsp?rid=<%= d.getRid() %>" class ="btn btn-sm btn-primary">Edit</a>
+                   <a href="../delete_Doctor?rid=<%= d.getRid() %>" class ="btn btn-sm btn-danger">Delete</a>  
                     </td>
                 </tr>
                <%} 

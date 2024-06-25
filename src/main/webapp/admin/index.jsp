@@ -114,6 +114,28 @@ button:hover {
     </div>
     
     
+        <div class="card">
+        <div class="card-content">
+            <h2>Lab Incharge</h2>
+        </div>
+        <div class="form-content">
+            <form id="hoverForm" action="addDoctor.jsp">
+                 <button type="submit">ADD</button>
+            </form>
+        </div>
+    </div>
+    
+        <div class="card">
+        <div class="card-content">
+            <h2>Ward Master</h2>
+        </div>
+        <div class="form-content">
+            <form id="hoverForm" action="addDoctor.jsp">
+                 <button type="submit">ADD</button>
+            </form>
+        </div>
+    </div>
+    
     
         <div class="card">
         <div class="card-content">
@@ -128,6 +150,28 @@ button:hover {
         </div>
     </div>
    
+   
+       <div class="card">
+        <div class="card-content">
+            <h2>FeedBack</h2>
+        </div>
+        <div class="form-content">
+            <form id="hoverForm" action="addDoctor.jsp">
+                 <button type="submit">View</button>
+            </form>
+        </div>
+    </div>
+    
+        <div class="card">
+        <div class="card-content">
+            <h2>Analysis</h2>
+        </div>
+        <div class="form-content">
+            <form id="hoverForm" action="addDoctor.jsp">
+                 <button type="submit">View</button>
+            </form>
+        </div>
+    </div>
    </div>
 
 

@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import com.dao.DoctorDao;
 import com.db.DBConnect;
-import com.entity.Doctor;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,22 +13,23 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 
-
-@WebServlet("/doctor_register")
-public class AddDoctor extends HttpServlet {
+@WebServlet("/update_Doctor")
+public class UpdateDoctor extends HttpServlet {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -568257686280368889L;
+	private static final long serialVersionUID = 5640210073226187759L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		
+
+
 		try {
 			
+			
+			int rid = Integer.parseInt(req.getParameter("rid"));
 			String firstname = req.getParameter("firstname");
 			String lastname = req.getParameter("lastname");
 			String dob = req.getParameter("dob");
@@ -39,28 +39,24 @@ public class AddDoctor extends HttpServlet {
 			String department = req.getParameter("spec");
 			
 			
+			
+			
 			DoctorDao dao = new DoctorDao(DBConnect.getConn());
-			boolean f = dao.registerDoctor(firstname ,lastname, dob , email, mobile , password , department);
+			boolean f = dao.updateDoctor(rid,firstname ,lastname, dob , email, mobile , password , department);
 			
 			HttpSession session = req.getSession();
-			
-			
-			
-			
-			
-			
 			
 			if(f)
 				
 			{
 				session.setAttribute("success", "Doctor registered");
-				resp.sendRedirect("admin/index.jsp");
+				resp.sendRedirect("admin/viewDoctor.jsp");
 				
 			}
 			
 			else {
 				session.setAttribute("error", "Doctor not registered");
-				resp.sendRedirect("index.jsp");
+				resp.sendRedirect("admin/viewDoctor.jsp");
 				
 			}
 			
@@ -71,6 +67,11 @@ public class AddDoctor extends HttpServlet {
 		   e.printStackTrace();
 		}
 	}
+}
+	
 	
 
-}
+
+
+
+   

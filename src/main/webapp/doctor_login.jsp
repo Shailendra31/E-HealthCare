@@ -84,28 +84,21 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="login-box">
-                    <h2 class="text-center">User Login</h2>
+                    <h2 class="text-center">Doctor Login</h2>
                     
                     
-                      <c:if test="${not empty sucMsg }" >
-                    	<p class="text-center text-success fs-3 ">${sucMsg}</p>
-                    	<c:remove var="sucMsg" scope="session"/>
-                    </c:if>
-                     <c:if test="${not empty errorMsg }" >
-                    	<p class="text-center text-danger fs-3 ">${errorMsg}</p>
-                    	<c:remove var="errorMsg" scope="session"/>
-                    </c:if>
+                  
                     
                     
-                    <form action="userLogin" method="post">
+                    <form action="doctorLogin" method="post">
                          <div class="form-group position-relative">
                             <label for="email">Email address</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <input type="email" id="email" name="demail" class="form-control" required>
                             <i class="fa fa-user"></i>
                         </div>
                         <div class="form-group position-relative">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="form-control" required>
+                            <input type="password" id="password" name="dpassword" class="form-control" required>
                             <i class="fa fa-lock"></i>
                         </div>
                         <button type="submit" class="btn btn-custom btn-block text-bg-success p-3">Login</button>

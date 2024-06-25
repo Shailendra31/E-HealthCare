@@ -2,32 +2,46 @@ package com.entity;
 
 public class Doctor {
 	
-	private String rid;
+	private int rid;
 	private String firstname;
 	private String lastname;
 	private String dob;
 	private String emailaddress;
 	private String mobile;
 	private String password;
+	private String department;
+	
+	
 	public Doctor() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Doctor(String rid, String firstname, String lastname, String dob, String emailaddress, String mobile,
-			String password) {
+     
+	 
+	
+	
+	
+	public Doctor(String firstname, String lastname, String dob, String emailaddress, String mobile,
+			String password, String department) {
 		super();
-		this.rid = rid;
+		
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.dob = dob;
 		this.emailaddress = emailaddress;
 		this.mobile = mobile;
 		this.password = password;
+		this.department = department;
 	}
-	public String getRid() {
+
+
+
+
+
+	public int getRid() {
 		return rid;
 	}
-	public void setRid(String rid) {
+	public void setRid(int rid) {
 		this.rid = rid;
 	}
 	public String getFirstname() {
@@ -66,7 +80,13 @@ public class Doctor {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
 	
 	
 
