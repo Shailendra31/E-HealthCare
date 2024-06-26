@@ -9,16 +9,22 @@
 </head>
 <body>
 <%@include file ="navbar.jsp" %>
-
-               <li>
-                    <a class="nav-link" href="../userLogout"><i class="fa-solid fa-arrow-right-to-bracket"></i>Logout</a>
-                </li>
-                <%
+ <%
     Object userObj = session.getAttribute("userObj");
     if (userObj == null) {
         response.sendRedirect("../user_login.jsp");
     }
 %>
+
+
+
+
+
+               <li>
+                    <a class="nav-link" href="../userLogout"><i class="fa-solid fa-arrow-right-to-bracket"></i>Logout</a>
+                </li>
+               
+
                 
 
 </body>

@@ -99,23 +99,108 @@
                     	<p class="text-center text-success fs-5 ">${errorMsg}</p>
                     	<c:remove var="errorMsg" scope="session"/>
                     </c:if>
+                    
+                    
+                    
                     <form action="user_register" method="post" id="passwordForm">
+                    
+                    
+                    
                         <div class="form-group position-relative">
                             <label for="username">Full Name</label>
                             <input type="text" id="username" name="username" class="form-control" required>
-                            <i class="fa fa-user"></i>
+                           
                         </div>
+                        
+                        
+                      
                           <div class="form-group position-relative">
                             <label for="emailaddress">Email Address</label>
                             <input type="email" id="emailaddress" name="emailaddress" class="form-control" required>
-                            <i class="fa fa-user"></i>
+                          
                         </div>
+                        
+                          <div class="form-group position-relative">
+                            <label for="gender">Gender</label>
+                            <input type="text" id="gender" name="gender" class="form-control" required placeholder="M/F">
+                            
+                        </div>
+                        
+                        
+                        
+                          <div class="form-group position-relative">
+                            <label for="dob">DOB</label>
+                            <input type="date" id="dob" name="dob" class="form-control" required>
+                           
+                        </div>
+                        
+                        
+                        
+                          <div class="form-group position-relative">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" class="form-control" required>
+                          
+                        </div>
+                        
+                        
+                    <div class="form-group position-relative">
+                            <label for="phoneNo">Mobile No</label>
+                            <input type="text" id="phoneNo" name="phoneNo" class="form-control" minlength="10" required>
+                            
+                        </div>
+                        
+                        
+                         <div class="form-group position-relative">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" class="form-control" required>
+                           
+                        </div>
+                        
+                        
+                         <div class="form-group position-relative">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" class="form-control" required>
+                            
+                        </div>
+                        
+                        
+                         <div class="form-group position-relative">
+                            <label for="dist">District</label>
+                            <input type="text" id="dist" name="dist" class="form-control" required>
+                    
+                        </div>
+                        
+                        
+                         <div class="form-group position-relative">
+                            <label for="area">Area</label>
+                            <input type="text" id="area" name="area" class="form-control" required>
+                            
+                        </div>
+                        
+                         <div class="form-group position-relative">
+                            <label for="pin">Pin Code</label>
+                            <input type="text" id="pin" name="pin" class="form-control" required>
+                           
+                        </div>
+                        
+                        
+                       
+                        
+                        
                         <div class="form-group position-relative">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" class="form-control" minlength="5" required>
                             
                             <i class="fa fa-lock"></i>
                         </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <small class="error" id="error">Password must be at least 5 characters long and contain at least one special character.</small>
                        
                         <button type="submit" class="btn btn-custom btn-block text-bg-success p-3">Register</button>

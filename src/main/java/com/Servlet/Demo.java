@@ -24,12 +24,39 @@ public class Demo extends HttpServlet{
 		// TODO Auto-generated method stub
 		
 		try {
+			
+			
+			
 			String fullName = req.getParameter("username");
+			
 			String email = req.getParameter("emailaddress");
+			
+			String gender = req.getParameter("gender");
+			
+			
+			String dob = req.getParameter("dob");
+			
+			int age = Integer.parseInt(req.getParameter("age"));
+			
+			String phoneNo = req.getParameter("phoneNo");
+			
+			
+			String country = req.getParameter("country");
+			
+			String state = req.getParameter("state");
+
+			
+			String district = req.getParameter("dist");
+			
+			String area = req.getParameter("area");
+			
+			
+			String pincode = req.getParameter("pin");
+			
 			String password = req.getParameter("password");
 			
 			
-			User u = new User(fullName , email , password );
+			User u = new User(fullName,email , gender , dob , age , phoneNo, country , state ,district ,area ,pincode ,password);
 			
 			UserDAO dao = new UserDAO(DBConnect.getConn());
 			

@@ -12,7 +12,7 @@
                     <a class="nav-link active" href="index.jsp">Appointment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="about.jsp">View Appointment</a>
+                    <a class="nav-link active" href="viewAppointment.jsp">View Appointment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="contact.jsp">Report</a>
