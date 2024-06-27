@@ -10,7 +10,7 @@
             <ul class="navbar-nav d-flex justify-content-center">
                 <li class="nav-item ">
                    
-                    <a class="nav-link active" href="about.jsp">View Appointment</a>
+                    <a class="nav-link active" href="viewAppointment.jsp">View Appointment</a>
                 </li>
                
             </ul>

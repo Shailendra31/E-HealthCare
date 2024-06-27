@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
       <%@ page import="com.dao.DoctorDao" %>
+            <%@ page import="com.dao.UserDAO" %>
             <%@ page import="com.dao.AppointmentDao" %>
           <%@ page import="com.Servlet.UserLogin" %>
            <%@ page import="com.entity.User" %>
@@ -54,12 +55,7 @@
     </style>
 <body>
 
-                <%
-    Object userObj = session.getAttribute("userObj");
-    if (userObj == null) {
-        response.sendRedirect("../user_login.jsp");
-    }
-%>
+
 <%@include file ="navbar.jsp" %>
 <div class ="mainCard">	
     <div class="cardI">
@@ -85,18 +81,22 @@
                <%
                   Doctor doctor = (Doctor) session.getAttribute("docObj");
                   AppointmentDao dao = new AppointmentDao(DBConnect.getConn());
-                  DoctorDao doa2 = new DoctorDao(DBConnect.getConn());
-                  List<Appointment> list = dao.getAllAppointmentById(user.getId());
+                  UserDAO doa2 = new UserDAO(DBConnect.getConn());
+                  List<Appointment> list = dao.getAllAppointmentByDoctorId(doctor.getRid());
                   for(Appointment ap : list)
                
-   			   {  Doctor d = doa2.getDoctorById(ap.getRid());
+   			   {  User u = doa2.getUserById(ap.getUid());
    			   %>
    			   
    			    <tr>
-                    <td><%= ap.getDoa() %></td>
+                    <td><%= u.getFullname() %></td>
+                    <td><%= u.getAge() %></td>
+                    <td><%= u.getGender() %></td>
+                    
                     <td><%= ap.getDiseases() %></td>
-                    <td><%= d.getFirstname() %> <%= d.getLastname() %></td>
-                    <td><%= d.getDepartment() %></td>
+                    <td><%= ap.getDoa() %></td>
+                    
+                    
                     <td>
                     <% if ("Pending".equals(ap.getStatus()))
                     	{
@@ -107,9 +107,10 @@
                     	}else{
                       %> <%=ap.getStatus() %>
                    
-                   <%} %>
+                   <%}
+                    %>
                    <td>
-                    <a href="../delete_Appointment?aid=<%= ap.getAid() %>" class ="btn btn-sm btn-danger">Delete</a>  
+                    <a href="viewPatient.jsp?uid=<%= ap.getUid() %>" class ="btn btn-sm btn-danger">View Patient</a>  
                     </td>
                 </tr>
                <%} 

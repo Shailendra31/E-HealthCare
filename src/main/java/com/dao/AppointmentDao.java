@@ -48,6 +48,44 @@ public class AppointmentDao {
 	
 	
 	
+	public List<Appointment> getAllAppointmentByDoctorId(int rid)
+	{
+		List<Appointment> list = new ArrayList<Appointment>();
+		Appointment ap = null;
+		
+		try {
+			String sql = "select * from appointment where rid =?";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, rid);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next())
+			{
+				ap = new Appointment();
+				
+				ap.setAid(rs.getInt(1));
+				ap.setUid(rs.getInt(2));
+				ap.setDiseases(rs.getString(3));
+				ap.setDoa(rs.getString(4));
+				ap.setRid(rs.getInt(5));
+				ap.setStatus(rs.getString(6));
+				
+				
+				list.add(ap);
+				
+			}
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return list;
+		
+	}
+	
+	
 	public List<Appointment> getAllAppointmentById(int userId)
 	{
 		List<Appointment> list = new ArrayList<Appointment>();

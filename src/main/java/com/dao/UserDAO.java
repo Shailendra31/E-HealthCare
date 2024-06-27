@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import com.entity.Doctor;
 import com.entity.User;
 
 public class UserDAO {
@@ -101,5 +102,47 @@ public class UserDAO {
 		
 		
 	}
+	
+	public  User getUserById(int id)
+	{
+		
+		
+		User u = null;
+		
+		try {
+			String sql = "select * from user_dtls where id=?";
+			PreparedStatement ps  = conn.prepareStatement(sql);
+			
+			ps.setInt(1,id);
+			
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				u = new User();
+				
+				
+				u.setId(rs.getInt(1));;
+				u.setFullname(rs.getString(2));
+				u.setEmail(rs.getString(3));
+				u.setGender(rs.getString(4));
+				u.setDob(rs.getString(5));
+				u.setAge(rs.getInt(6));
+				u.setPhoneNo(rs.getString(7));
+				u.setCountry(rs.getString(8));
+				u.setState(rs.getString(9));
+				u.setDistrict(rs.getString(10));
+				u.setArea(rs.getString(11));
+				u.setPincode(rs.getString(12));
+				u.setPassword(rs.getString(13));
+			  
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return u;
+	}
+	
 
 }
