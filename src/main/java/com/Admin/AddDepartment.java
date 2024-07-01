@@ -50,7 +50,7 @@ public class AddDepartment extends HttpServlet {
 		e.printStackTrace();
 		
 	}
-	}
+}
 	
 	
 

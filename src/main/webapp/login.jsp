@@ -36,7 +36,7 @@
     <div class="card shadow bg-body-tertiary rounded bg-warning bg-warning">
       
       <div class="card-body">
-        <h5 class="card-title">User Login</h5>
+        <h5 class="card-title">Patient Login</h5>
         <a href="user_login.jsp" class="btn btn-primary ">Login</a>
         </div>
     </div>
@@ -46,20 +46,12 @@
       
       <div class="card-body">
         <h5 class="card-title">Laboratory</h5>
-        <a href="#" class="btn btn-primary">Login</a>
+        <a href="LabInc_login.jsp" class="btn btn-primary">Login</a>
         </div>
     </div>
   </div>
   
-  <div class="col">
-    <div class="card shadow bg-body-tertiary rounded bg-warning">
-      
-      <div class="card-body">
-        <h5 class="card-title">Ward Master</h5>
-        <a href="#" class="btn btn-primary">Login</a>
-        </div>
-    </div>
-  </div>
+ 
   
   
   

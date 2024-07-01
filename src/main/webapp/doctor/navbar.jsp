@@ -19,7 +19,10 @@
         <div class="d-flex ms-auto">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="profile.jsp"><i class="fa-solid fa-user-large"></i> Profile  </a>
+                    <a class="nav-link active" href="#"><i class="fa-solid fa-user-large"></i> Profile  </a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="../doctorLogout"><i class="fa-solid fa-arrow-right-to-bracket"></i>Logout</a>
                 </li>
             </ul>
         </div>

@@ -1,4 +1,7 @@
 
+ <%@ page import="com.Servlet.UserLogin" %>
+           <%@ page import="com.entity.User" %>
+<% User user1 = (User) session.getAttribute("userObj"); %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary " >
     <div class="container-fluid d-flex justify-content-center">
         <!-- Logo -->
@@ -23,8 +26,13 @@
         <div class="d-flex ms-auto">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="profile.jsp"><i class="fa-solid fa-user-large"></i> Profile  </a>
+                    <a class="nav-link active" href="#"><i class="fa-solid fa-user-large"></i> <%= user1.getFullname() %>  </a>
                 </li>
+                
+               <li>
+                    <a class="nav-link active" href="../userLogout"><i class="fa-solid fa-arrow-right-to-bracket"></i>Logout</a>
+                </li>
+               
             </ul>
         </div>
     </div>

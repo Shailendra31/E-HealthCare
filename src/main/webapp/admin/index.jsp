@@ -113,31 +113,7 @@ button:hover {
         </div>
     </div>
     
-    
-        <div class="card">
-        <div class="card-content">
-            <h2>Lab Incharge</h2>
-        </div>
-        <div class="form-content">
-            <form id="hoverForm" action="addDoctor.jsp">
-                 <button type="submit">ADD</button>
-            </form>
-        </div>
-    </div>
-    
-        <div class="card">
-        <div class="card-content">
-            <h2>Ward Master</h2>
-        </div>
-        <div class="form-content">
-            <form id="hoverForm" action="addDoctor.jsp">
-                 <button type="submit">ADD</button>
-            </form>
-        </div>
-    </div>
-    
-    
-        <div class="card">
+            <div class="card">
         <div class="card-content">
             <h2>Departments</h2>
         </div>
@@ -149,7 +125,33 @@ button:hover {
             </form>
         </div>
     </div>
-   
+    
+        <div class="card">
+        <div class="card-content">
+            <h2>Lab Incharge</h2>
+        </div>
+        <div class="form-content">
+            <form id="hoverForm" action="addLabIncharge.jsp">
+                 <button type="submit">ADD</button>
+            </form>
+        </div>
+    </div>
+    
+        <div class="card">
+        <div class="card-content">
+            <h2>Laboratory</h2>
+        </div>
+        <div class="form-content">
+            <form action ="../add_lab" method="post"  id="hoverForm">
+                <label for="name">Laboratory:</label>
+                <input type="text" id="lab" name="lab" required>
+                <button type="submit" >ADD</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
    
        <div class="card">
         <div class="card-content">
@@ -162,16 +164,7 @@ button:hover {
         </div>
     </div>
     
-        <div class="card">
-        <div class="card-content">
-            <h2>Analysis</h2>
-        </div>
-        <div class="form-content">
-            <form id="hoverForm" action="addDoctor.jsp">
-                 <button type="submit">View</button>
-            </form>
-        </div>
-    </div>
+        
    </div>
 
 

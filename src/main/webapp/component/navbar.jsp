@@ -22,6 +22,10 @@
         <!-- Right Login Link -->
         <div class="d-flex ms-auto">
             <ul class="navbar-nav">
+                            <li class="nav-item">
+                    <a class="nav-link active" href="signup.jsp"><i class="fa-solid fa-arrow-right-to-bracket"></i> Register</a>
+                </li>
+            
                 <li class="nav-item">
                     <a class="nav-link active" href="login.jsp"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
                 </li>
